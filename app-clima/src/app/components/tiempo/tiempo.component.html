@@ -1,0 +1,35 @@
+<div class="weather-card border rounded">
+  <nav class="navbar bg-body-transparent">
+    <div class="container-fluid">
+      <div class="d-flex">
+        <input
+          class="form-control me-2"
+          type="text"
+          placeholder="Busca una ciudad"
+          aria-label="Search"
+          [(ngModel)]="ciudad"
+        />
+        <button class="btn btn-outline-light" (click)="getWeather(ciudad)">
+          BUSCAR
+        </button>
+
+        {{ clima.main.temp }}
+      </div>
+    </div>
+  </nav>
+
+  <div class="d-flex flex-column align-items-center">
+    <p class="text-center text-light fs-1">XALAPA</p>
+
+    <p class="text-center text-light fs-1">20°</p>
+
+    <img
+      src="https://cdn-icons-png.flaticon.com/512/4005/4005793.png"
+      alt="soleado"
+      width="100"
+      height="100"
+    />
+
+    <p class="text-center text-light fs-3">Soleado</p>
+  </div>
+</div>

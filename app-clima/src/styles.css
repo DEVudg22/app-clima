@@ -1,1 +1,42 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Pompiere&family=Rubik+Marker+Hatch&display=swap");
+
+.bg-body {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("https://png.pngtree.com/thumb_back/fh260/background/20220805/pngtree-daytime-blue-sky-with-white-clouds-wallpaper-daylight-backdrop-photo-image_28081644.jpg");
+  background-size: cover;
+}
+
+.header {
+  font-family: "Rubik Marker Hatch", system-ui;
+  background: rgb(13, 18, 200);
+  background: linear-gradient(
+    90deg,
+    rgba(13, 18, 200, 0.5366597322522759) 0%,
+    rgba(2, 14, 18, 0.3882003484987745) 47%,
+    rgba(92, 7, 224, 0.3741947462578782) 100%
+  );
+}
+
+.footer {
+  background: linear-gradient(
+    90deg,
+    rgba(13, 18, 200, 0.5366597322522759) 0%,
+    rgba(2, 14, 18, 0.3882003484987745) 47%,
+    rgba(92, 7, 224, 0.3741947462578782) 100%
+  );
+}
+
+.height-100 {
+  height: 100vh;
+}
+
+.weather-card {
+  height: 100%;
+  background: rgb(66, 55, 69);
+  background: radial-gradient(
+    circle,
+    rgba(66, 55, 69, 0.5366597322522759) 0%,
+    rgba(135, 98, 133, 0.3882003484987745) 47%,
+    rgba(111, 20, 74, 0.3741947462578782) 100%
+  );
+}
