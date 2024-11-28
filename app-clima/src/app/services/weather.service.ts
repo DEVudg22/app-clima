@@ -1,17 +1,18 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class WeatherService {
-  apiKey: string = '39ce8d413c5974b092ec0bf5fa2fbe2a';
-  URL: string = '';
-  constructor(private http: HttpClient) {
-    this.URL = `https://api.openweathermap.org/data/2.5/weather?units=metric&lang=sp&appid=${this.apiKey}&q=`;
-  }
+  constructor(private http: HttpClient) {}
 
-  public getCity(city: string) {
-    return this.http.get<any>(`${this.URL}${city}`);
+  apiKey: string = '39ce8d413c5974b092ec0bf5fa2fbe2a';
+  URL: string = 'https://api.openweathermap.org/data/2.5/weather?';
+
+  cityWeather(city: string) {
+    return this.http.get(
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${this.apiKey}&units=metric&lang=es`
+    );
   }
 }

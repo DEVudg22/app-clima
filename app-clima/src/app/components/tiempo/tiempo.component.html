@@ -1,35 +1,35 @@
 <div class="weather-card border rounded">
-  <nav class="navbar bg-body-transparent">
-    <div class="container-fluid">
-      <div class="d-flex">
-        <input
-          class="form-control me-2"
-          type="text"
-          placeholder="Busca una ciudad"
-          aria-label="Search"
-          [(ngModel)]="ciudad"
-        />
-        <button class="btn btn-outline-light" (click)="getWeather(ciudad)">
-          BUSCAR
-        </button>
-
-        {{ clima.main.temp }}
-      </div>
+  <div class="container-fluid">
+    <div class="d-flex">
+      <input
+        class="form-control me-2 mt-3"
+        type="text"
+        name="cityName"
+        placeholder="Busca una ciudad"
+        [(ngModel)]="ciudad"
+      />
+      <button
+        type="button"
+        class="btn btn-outline-light mt-3"
+        (click)="getWeather()"
+      >
+        BUSCAR
+      </button>
     </div>
-  </nav>
+  </div>
 
-  <div class="d-flex flex-column align-items-center">
-    <p class="text-center text-light fs-1">XALAPA</p>
+  <div *ngIf="clima" class="d-flex flex-column align-items-center mt-5">
+    <p class="text-center text-light fs-1">{{ clima.main.temp }}°C</p>
 
-    <p class="text-center text-light fs-1">20°</p>
+    <p class="text-center text-light fs-1">
+      {{ clima.name }}, {{ clima.sys.country }}
+    </p>
 
-    <img
-      src="https://cdn-icons-png.flaticon.com/512/4005/4005793.png"
-      alt="soleado"
-      width="100"
-      height="100"
-    />
-
-    <p class="text-center text-light fs-3">Soleado</p>
+    <p class="text-center text-light fs-3">
+      {{ clima.weather[0].description }}
+    </p>
+    <p class="text-center text-light fs-3">
+      Humedad: {{ clima.main.humidity }}%
+    </p>
   </div>
 </div>
