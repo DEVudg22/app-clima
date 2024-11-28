@@ -40,3 +40,9 @@
     rgba(111, 20, 74, 0.3741947462578782) 100%
   );
 }
+
+@media (max-width: 986px) {
+  .footer {
+    visibility: hidden;
+  }
+}
